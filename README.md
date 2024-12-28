@@ -16,8 +16,8 @@
 
 
 
-版本1.0.8 MouseLQ&rtd目录整理   0x16z&Mouse&Wxcer内容 Mufeng校验
-Release Pre
+版本1.1.0 MouseLQ&rtd目录整理   0x16z&Mouse&Wxcer内容 Mufeng校验
+Release Nightly
 
 Wait For Add AntiCheat:Spartan、AGC、AntiCheatAddition
 
@@ -50,13 +50,13 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 
 ---
 
-高版本弱检测两项:NoSlow(any)、Reach、Gapple(副手)、Elyra(鞘翅)
+高版本弱检测两项:NoSlow(any)、Reach、Gapple(副手)、Elyra(鞘翅)、三叉戟(高版本激流:可以无限fly)
 
 物品弱检测:Boat(船)、Wall(墙)
 
-误判:Motion(A)[piston redstone]、Aim(Random?)、Badpacket(Random?)、三叉戟(高版本激流)、speed(速度药水-II-III)
+误判:Motion(A)[piston redstone]、Aim(Random?)、Badpacket(Random?)、speed(速度药水-II-III)、Fly(B)[Jump Boost Potions]、Elytra(?)(俯冲加速后抬头)
 
-基岩版:有disabler可以dis掉，检测不是特别强
+基岩版:有disabler可以dis掉，检测不是特别强 / Vulcan官网写"不检测"Geyser(Bedrock)事实上检测，那个官网已经非常老旧(mcplugins)
 
 反作弊兼容服务器的版本:1.7-1.21
 
@@ -376,6 +376,7 @@ FastPlace在你斜上搭的时候会叠出vl，我还没解决方案
 
 direction这个检测按理来说是检测你手中方块的switch方案(当方块不足的时候换方块)
 但是实际上还检测部分转头，我不知道为什么
+> 检测的是玩家发c08的direction和服务器基于转头计算的direction是否相同，有误判(Xia__mc语)
 
 survivalfly是当你在速度太快的时候有概率检测你walkspeed+vdistrel+vacc+hspeed+airjump
 减速(比如说关闭sprint or 开启slow)即可
@@ -389,6 +390,8 @@ blockplace.scaffold本人不清楚
 有NCP和UNCP的Sword Full NoSlow，但是没有Consume(Food?) NoSlow
 
 吃东西noslow是很难去bypass的，就算在绿玩下跳着吃东西也会被反作弊打断
+
+- loyisa的问题，可以去anticheat-test测试(Xia__mc语)
 
 2024/12/24，BlockSMC SwordFullNoSlow(UNCP)失效
 
@@ -439,12 +442,13 @@ HitBox暂未测试
 反作弊兼容服务器的版本:1.7-1.20.1
 
 - 有人说他是圈钱反作弊，但是他和Polar反作弊是同一个Dev(lucky)，估计这个反写着玩的
+- 云检测，一些检测会时不时的掉
 
 #### Velocity
 
 无法0 0，其他忘了
 
-> 测试版本1.8.9 LiquidBounce B98
+> 测试版本1.8.9 LiquidBounce B98 / 在云检测未掉时
 
 ---
 
