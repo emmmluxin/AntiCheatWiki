@@ -161,14 +161,14 @@ DamageFly，受击弱检测。
 在接受到TNT爆炸后可直接原地起飞
 
 
-> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP
+> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP。
 
 
 #### LongJump
 
 在flag后，继续保持一tick的动量即可（来自4iiiiiii2(liangzaihua)）
 
-> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP
+> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP。
 
 #### Scaffold:
 
@@ -183,7 +183,7 @@ DamageFly，受击弱检测。
 
 在spoofground后直接设置MotionY即可TowerMove
 
-> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP
+> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP  
 > 测试版本1.21 MouseClient <=> Via1.8.9 MouseClient
 
 #### KillAura:
