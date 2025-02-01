@@ -141,7 +141,7 @@ VulcanGhostBlock，一个很离谱的Fly方法，由于大多数人
 ---
 
 高版本弱检测两项：Raycast(sca)、Gapple(副手)  
-弱检测：flag，搭路时groundspoof
+弱检测：flag  
 物品弱检测:受击
 
 误判:BadPackets(When u client lag,will get 1 timer VL)、Move(半雪groundspoof)、HitBox(高版本)-有几率吞刀
@@ -166,7 +166,7 @@ DamageFly，受击弱检测。
 
 #### LongJump
 
-在flag后，继续保持一tick的动量即可（来自4iiiiiii2(liangzaihua)）
+在回弹后恢复一tick的动量即可（来自4iiiiiii2(liangzaihua)）  
 
 > 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP  
 
@@ -181,7 +181,7 @@ DamageFly，受击弱检测。
 
 并且在所有版本Matrix都有SameY+Jump弱检测
 
-在spoofground后直接设置MotionY即可TowerMove
+在spoofground后直接设置MotionY可TowerMove（对groundspoof弱检测的猜测）
 
 > 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP  
 > 测试版本1.21 MouseClient <=> Via1.8.9 MouseClient  
