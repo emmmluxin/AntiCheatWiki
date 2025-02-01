@@ -140,8 +140,8 @@ VulcanGhostBlock，一个很离谱的Fly方法，由于大多数人
 
 ---
 
-高版本弱检测两项：Raycast(sca)、Gapple(副手)
-
+高版本弱检测两项：Raycast(sca)、Gapple(副手)  
+弱检测：移动（爆炸后，被标记后）  
 物品弱检测:受击
 
 误判:BadPackets(When u client lag,will get 1 timer VL)、Move(半雪groundspoof)、HitBox(高版本)-有几率吞刀
@@ -154,13 +154,21 @@ VulcanGhostBlock，一个很离谱的Fly方法，由于大多数人
 
 - Matrix移动监测比Vulcan严重得多，大部分是由一个叫MOVE的vl担任的
 
-#### HighJump
+#### HighJump（TNT）
 
 DamageFly，受击弱检测。
 
-4iiiiiii2(liangzaihua)做到了很多在Matrix下的暴力绕过，有BedBreaker(Fucker)、AutoBlockKillAura等
+在接受到TNT爆炸后可直接原地起飞
 
-> 暂未测试，资料来源[liangzaihua video]{https://www.bilibili.com/video/BV1rY1sY4EhN}
+
+> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP  
+
+
+#### LongJump
+
+在回弹后恢复上一tick的动量即可（来自4iiiiiii2(liangzaihua)）  
+
+> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP  
 
 #### Scaffold:
 
@@ -173,7 +181,10 @@ DamageFly，受击弱检测。
 
 并且在所有版本Matrix都有SameY+Jump弱检测
 
-> 测试版本1.21 MouseClient <=> Via1.8.9 MouseClient
+在spoofground后直接设置MotionY可TowerMove（对groundspoof弱检测的猜测）
+
+> 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP  
+> 测试版本1.21 MouseClient <=> Via1.8.9 MouseClient  
 
 #### KillAura:
 
@@ -184,7 +195,7 @@ AimBot检测有检测snap，建议提前就拉好较长的swing range
 
 Click主要监测点击速度，不超过10-14应该就没事
 
-需要MoveFix;在LB中叫做Strafe(Strafe check)
+无需MoveFix
 
 - Click检测很是奇怪，9-12检测，10-14不检测
 
