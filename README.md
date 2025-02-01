@@ -140,7 +140,7 @@ VulcanGhostBlock，一个很离谱的Fly方法，由于大多数人
 
 ---
 
-高版本弱检测两项：Raycast(sca)、Gapple(副手)
+高版本弱检测两项：Raycast(sca)、Gapple(副手)  
 弱检测：flag，搭路时groundspoof
 物品弱检测:受击
 
