@@ -141,7 +141,7 @@ VulcanGhostBlock，一个很离谱的Fly方法，由于大多数人
 ---
 
 高版本弱检测两项：Raycast(sca)、Gapple(副手)  
-弱检测：flag  
+弱检测：移动（爆炸后，被标记后）  
 物品弱检测:受击
 
 误判:BadPackets(When u client lag,will get 1 timer VL)、Move(半雪groundspoof)、HitBox(高版本)-有几率吞刀
@@ -166,7 +166,7 @@ DamageFly，受击弱检测。
 
 #### LongJump
 
-在回弹后恢复一tick的动量即可（来自4iiiiiii2(liangzaihua)）  
+在回弹后恢复上一tick的动量即可（来自4iiiiiii2(liangzaihua)）  
 
 > 测试版本：4iiiiiii2(liangzaihua)更改过后的FDP  
 
