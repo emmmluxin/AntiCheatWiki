@@ -195,7 +195,7 @@ AimBot检测有检测snap，建议提前就拉好较长的swing range
 
 Click主要监测点击速度，不超过10-14应该就没事
 
-需要MoveFix;在LB中叫做Strafe(Strafe check)
+无需MoveFix
 
 - Click检测很是奇怪，9-12检测，10-14不检测
 
