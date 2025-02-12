@@ -175,7 +175,9 @@ DamageFly，受击弱检测。
 
 并且在所有版本Matrix都有SameY+Jump弱检测
 
-> 测试版本1.21 MouseClient <=> Via1.8.9 MouseClient
+新版本矩阵已经有了抓特征的Scaffold，需要GodBridge（和Spiter类似，作者透漏过一点）
+
+> 测试版本1.21 MouseClient <=> Via1.8.9 MouseClient，1.8.9 LiquidBounce b91
 
 #### KillAura:
 
@@ -193,6 +195,8 @@ Click主要监测点击速度，不超过10-14应该就没事
 > 测试版本Via1.8.9 MouseClient
 
 > 测试版本1.8.9 LiquidBounce B98
+
+##### 新版本矩阵有一个需要加钱的云检查，且有保密协议
 
 #### NoSlow:
 
@@ -212,9 +216,11 @@ Sword除了NCP和Blink以外都能FullMovement
 
 中规中矩，如果使用负数Velocity可以做到0vl
 
+其实你只要移动就可以01（Horizontal 0即可，垂直会检测）
+
 所谓负数就是别人打你但是你的击退是向前的
 
-> 测试版本1.21 MouseClient
+> 测试版本1.21 MouseClient, 1.8.9 LiquidBounce b91
 
 #### Reach&HitBox:
 
@@ -222,9 +228,11 @@ Sword除了NCP和Blink以外都能FullMovement
 
 高版本应该是有弱检测，同时我看到过有人用VAPE做到任何range or hitbox
 
+Hitbox误判多（当然有新的hitbox检测但是保密）
+
 但是不知道是什么版本的了
 
-> 测试版本1.21 MouseClient
+> 测试版本1.21 MouseClient, 1.8.9 LiquidBounce b91
 
 ##### TimerBalance(TickShift):
 
