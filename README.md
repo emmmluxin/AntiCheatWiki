@@ -627,6 +627,7 @@ MoveClick只会在Chest(箱子)内检查，在Inventory(背包)内就不会
 ---
 
 ## Tatako:硬算、高版本误判、基岩版未知、免费、国产
+Medusa based.
 
 高版本弱检测:
 
@@ -636,6 +637,8 @@ MoveClick只会在Chest(箱子)内检查，在Inventory(背包)内就不会
 
 - Move检测完全，但是每一项检测都是狗屎，Ymotion检测严格但误判不少
 - FlyB已经重写，但是仍然有不少误判
+
+> 哪个入乱写Dev的，plugin.yml不会看看？
 
 基岩版:不检测
 
