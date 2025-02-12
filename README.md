@@ -92,7 +92,9 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 Aim检测中规中矩，还可以但是照样绕
 Cps推荐9-12，有AutoClicker检测
 
-可Switch，具有KeepSprint检测，不需要MoveFix，具有Raycast检测(Aim[Q])
+可Switch，具有KeepSprint检测，不需要MoveFix，Raycast检测约等于没有，Hitbox和Reach纯属玄学。
+
+补充：新火神新增了SpeedE，似乎是模拟但还是无法检测没Movefix的killaura。
 
 > 测试版本1.8.9 LiquidBounce B98
 
@@ -100,7 +102,7 @@ Cps推荐9-12，有AutoClicker检测
 
 中规中矩，有时候对绿玩进行轻微的误判
 
-可以0 0
+可以0 0（因为Vulcan对transaction的检测就是傻逼，cancel Transaction和velocity就可以00）
 
 > 测试版本1.8.9 LiquidBounce B98
 
@@ -130,13 +132,13 @@ VulcanGhostBlock，一个很离谱的Fly方法，由于大多数人
 
 不知道怎么激活它，所以Vulcan Dev不会修复
 
-在用SpoofGround(FakeGround)的时候，Vulcan才会回弹(LagBack)
+在用SpoofGround(FakeGround)的时候，Vulcan才会回弹(LagBack)（其实是GhostBlock检测，压根没vl）
 
 > 测试版本1.8.9 LiquidBounce B98
 
 ---
 
-## Matrix矩阵:硬算、高版本少量弱检测、基岩版未知、付费、国产
+## Matrix矩阵:硬算、高版本少量弱检测、基岩版不检测、付费、国产
 
 ---
 
@@ -443,6 +445,7 @@ HitBox暂未测试
 
 - 有人说他是圈钱反作弊，但是他和Polar反作弊是同一个Dev(lucky)，估计这个反写着玩的
 - 云检测，一些检测会时不时的掉
+- 纯数据包，自写收发包，可能炸。
 
 #### Velocity
 
@@ -547,12 +550,14 @@ Bow同ConsumeMode
 
 - 2020年的反作弊，仅有1.8.9、1.7.10两个服务器支持版本，十分强大，误判也十分多
 - 注意，本章节用的HAWK为Loyisa的HAWK，有很多VL隐藏，所以描述很可能不完整
+- Hawk默认很多检测不开，几个vl才会有一个alert，config可以调整。
 
 #### KillAura:
 
 Range:3.19不检测，Rotation不检测
 - 在DBC时会有fightspeed VL
 - 检测实际上很严格，但是Loyisa关掉了大部分check
+- 其实是默认不开 有一个较为神奇的启发Aim检测，需要拉低Rotation speed（其实就是snap检测）
 
 > 测试版本1.8.9 FDPXReborn5.8.1
 
@@ -564,7 +569,7 @@ Sword使用switch / Item(Food)使用Bug
 
 #### Velocity
 
-疑似硬检查
+硬检查
 
 > 测试版本1.8.9 FDPXReborn5.8.1
 
@@ -621,46 +626,45 @@ MoveClick只会在Chest(箱子)内检查，在Inventory(背包)内就不会
 
 误判:BalanceTimerCheck(BadPackets)、GhostBlock(FlyB)、aimF(InstantRotation)、Scaffold(限速)、Reach、flyC(groundspoof)、AuraA、BlockSprint、Bed(在床上)
 
-- Dev:dani02 / 硬检测
-- Move检测完全，但是每一项检测都是狗屎，Ymotion检测严格，有chatcheat check
+- Move检测完全，但是每一项检测都是狗屎，Ymotion检测严格但误判不少
+- FlyB已经重写，但是仍然有不少误判
 
-基岩版:wdk
+基岩版:不检测
 
 #### KillAura:
 
-30~50 Rotation 需要开启RandomCenter
+Rotation速度不能拉高，cps9~13，开模拟双倍点否则会被Autoclicker检查杀死
 
 有ThroughWall(穿过墙壁攻击)检测
 
 > 测试版本1.8.9 FDPXReborn5.8.1
 
 #### NoSlow:
+绕过已经修补。
 
-Vanilla forward0.8 strafe0.2 一直跳
-
-or NCP Mode
-
-> 测试版本1.8.9 FDPXReborn5.8.1
+> 测试版本1.8.9 LiquidBounce b91
 
 #### Scaffold:
 
 开ExtraClick、KeepYJump
 
-无Raycast检测?
+Raycast检测慢，有Eagle检测，如果Eagle需要将蹲下的时间随机一点。
 
-> 测试版本1.8.9 FDPXReborn5.8.1
+> 测试版本1.8.9 iquidBounce b91
 
 #### TimerBalance(TickShift):
 
 虽然有专项检测(BadPacket)，但是仍然可用
+后来已经修补（例如LiquidBounce b91等客户端的 VulcanHop 速度，就是TimerBoost）
 
-> 测试版本1.8.9 FDPXReborn5.8.1
+> 测试版本1.8.9 LiquidBounce b91
 
 #### Speed:
 
 IntaveTimer or strafe,speed0.3,dolaunchspeed,launchspeed0.55,uptimer0.77,downtimer1.77,resetxz(OnGround弱检测)
+后Strafe被修补，不能GroundStrafe，老老实实Legit speed吧
 
-> 测试版本1.8.9 FDPXReborn5.8.1
+> 测试版本1.8.9 LiquidBounce b91
 
 #### Critical:
 
@@ -670,11 +674,11 @@ More Mode(NoMove)
 
 #### Fly:
 
-0.95.1/Buzz   0.95.02 Fixed
+0.95.1/Buzz   0.95.02 已经修了
 
-久了会InvalidY，vanilla,timer0.07,speed15,motiony-0.01
+久了会InvalidY，vanilla,timer0.07,speed15,motiony-0.01 已经修了
 
-> 测试版本1.8.9 FDPXReborn5.8.1
+> 测试版本1.8.9 FDPXReborn5.8.1，LiquidBounce b91
 
 #### BedBreaker:
 
@@ -694,16 +698,17 @@ Velocity: h -1 v 1(反向击退)
 
 #### Strafe:
 
-检测
+检测（包括GroundStrafe）
 
 #### NoFall:
 
-Damage(在掉落空中受到伤害) 不检测
+Damage(在掉落空中受到伤害) 不检测，有人用修改的noGround绕过了，但大部分客户端的NoFall都用不了
 
 #### FastUse:
 
-不检测(未确定)
+没有专门的检测，但无法使用（会有杂七杂八的BadPackets）
 
+> 测试版本1.8.9 LiquidBounce b91
 ---
 
 ## Horizon-BETA17
@@ -734,6 +739,26 @@ BadpacketE和KillauraNormalAB为AB检测
 
 ---
 
+## Grizzly
+
+新反作弊。
+物品弱检测：idk
+高版本弱检测：idk
+误判：idk
+
+#### Killaura
+有较好的Aim检查和一堆分析转头检查，需要RandomCenter，cps8~14，转头速度40~65
+
+> 测试版本1.8.9 LiquidBounce b91
+#### Scaffold
+有一个神奇的ScaffoldC，可能是限速，需要KeepY。
+
+> 测试版本1.8.9 LiquidBounce b91
+
+#### Movement
+总体还可以，Speed无法绕过，检测GroundStrafe，老老实实legit speed。
+
+> 测试版本1.8.9 LiquidBounce b91
 
 ## 注释:
 
@@ -753,7 +778,7 @@ BadpacketE和KillauraNormalAB为AB检测
 
 > - Edit by Wxcer
 
-6. Swing:挥手，有歧义，比如在KillAura里面就是距离多远就开始挥刀(但是不打到)，在Scaffold里面就是动画效果
+6. Swing:挥手，有歧义，比如在KillAura里面就是距离多远就开始挥刀(但是不打到)，Scaffold也是挥手，你不发Arm包可能会被检测
 
 7. 保密协议:反作弊所拥有一项保密协议，使得反作弊不得拿来用于绕过等，一经发现会有相应处罚设施，有的反作弊保密协议限定服务器必须在多少人数以上才可使用该反作弊。
 
@@ -768,6 +793,7 @@ BadpacketE和KillauraNormalAB为AB检测
 4. tree.ac (有AAC5)
 5. test.karhu.ac (Karhu测试服)
 6. tatako.hezhongkj.top (tatako测试服)
+7. 51.79.111.68:25612 (Grizzly测试服)
 
 
 
