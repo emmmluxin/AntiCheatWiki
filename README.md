@@ -661,7 +661,7 @@ Rotation速度不能拉高，cps9~13，开模拟双倍点否则会被Autoclicker
 
 Raycast检测慢，有Eagle检测，如果Eagle需要将蹲下的时间随机一点。
 
-> 测试版本1.8.9 iquidBounce b91
+> 测试版本1.8.9 LiquidBounce b91
 
 #### TimerBalance(TickShift):
 
@@ -736,7 +736,7 @@ Damage(在掉落空中受到伤害) 不检测，有人用修改的noGround绕过
 
 #### Scaffold:
 
-无检测
+检测rayCast。
 
 #### NoSlow:
 
