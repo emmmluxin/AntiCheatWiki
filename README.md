@@ -25,7 +25,7 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 
 ---
 
-感谢名单:[Upvivb](https://space.bilibili.com/1649992207)、cmd1152、[4iiiiiii2](https://space.bilibili.com/3493274998278662){liangzaihua}、[深情](https://space.bilibili.com/1500973767)、[xia__mc](https://space.bilibili.com/526612694)、[Loyisa](https://space.bilibili.com/7568442)、[GordonHim](https://space.bilibili.com/448576460) and You
+感谢名单:[滑稽的连](https://space.bilibili.com/1067237820)、[Upvivb](https://space.bilibili.com/1649992207)、cmd1152、[4iiiiiii2](https://space.bilibili.com/3493274998278662){liangzaihua}、[深情](https://space.bilibili.com/1500973767)、[xia__mc](https://space.bilibili.com/526612694)、[Loyisa](https://space.bilibili.com/7568442)、[GordonHim](https://space.bilibili.com/448576460) and You
 
 ---
 
