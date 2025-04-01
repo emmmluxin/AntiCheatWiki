@@ -40,8 +40,8 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 8. Polar wdk    活跃
 9. AAC 5~4    停更
 10. Hawk BETA2108 BETA2008   停更  One Last Update In 2020
-11. Tatako 9.1.2    活跃
-12. Spiter   活跃
+11. Tatako 0.96.5    活跃
+12. Spiter wdk   活跃
 13. Horizon-BETA17   活跃
 
 ---
@@ -60,7 +60,7 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 
 反作弊兼容服务器的版本:1.7-1.21
 
-判断特征:拉回/回弹较少、sca放方块突然坠机，不放方块了
+判断特征:拉回/回弹较少，但是GhostBlock回弹。
 
 - Vulcan对于任何一个hack mode都具有检测项目，但是都不是很强，一般为生存服反作弊。
 
@@ -73,7 +73,7 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 
 #### Scaffold:
 
-在Expand情况下（距离较远）会不检测（超出特征范围）
+在Expand情况下（距离较远）会不检测（isBridging = flase，且那个expand检测本来就一般）
 
 有Raycast check,强度不高
 
@@ -83,13 +83,13 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 
 可以进行omni(暴力的)而且没有任何bypass的情况下
 
-虽然有sprint检测但是没用
+虽然有sprint检测但是几乎没用
 
 > 测试版本1.21 Wurst
 
 #### Killaura:
 
-Aim检测中规中矩，还可以但是照样绕
+Aim检测对于现代的客户端几乎没有，只要你的客户端完整修复了灵敏度即可。
 Cps推荐9-12，有AutoClicker检测
 
 可Switch，具有KeepSprint检测，不需要MoveFix，Raycast检测约等于没有，Hitbox和Reach纯属玄学。
@@ -102,7 +102,7 @@ Cps推荐9-12，有AutoClicker检测
 
 中规中矩，有时候对绿玩进行轻微的误判
 
-可以0 0（因为Vulcan对transaction的检测就是傻逼，cancel Transaction和velocity就可以00）
+可以0 0（因为Vulcan对transaction的检测就是sb，cancel Transaction和velocity就可以00，虽然说改进了但是和没改进一样）
 
 > 测试版本1.8.9 LiquidBounce B98
 
@@ -110,13 +110,15 @@ Cps推荐9-12，有AutoClicker检测
 
 GroundSpoof、Vclip、Timer检测
 
+可以使用一些客户端自带的Vulcan Nofall
+
 建议使用安全一些的MLG
 
 > 测试版本1.21 Wurst
 
 ##### Reach&HitBox:
 
-在高版本根本不检测，低版本检测也很弱，可以使用Via or Dis
+在高版本根本不检测，低版本检测也几乎没有，可以使用Via or Dis
 
 > 测试版本1.21 Wurst
 
