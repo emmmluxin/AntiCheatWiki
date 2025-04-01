@@ -34,7 +34,7 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 2. Matrix 7.11.12   活跃
 3. GrimAC 2.3.68    活跃
 4. NCP 3.17.1    活跃
-5. Verus b3896    停更
+5. Verus b3896    偶尔更新
 6. Themis 0.16.1    活跃
 7. Intave 12    活跃
 8. Polar wdk    活跃
@@ -42,7 +42,8 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 10. Hawk BETA2108 BETA2008   停更  One Last Update In 2020
 11. Tatako 0.96.5    活跃
 12. Spiter wdk   活跃
-13. Horizon-BETA17   活跃
+13. Horizon-BETA17   疑似死亡
+14. Grizzly wdk 活跃
 
 ---
 
