@@ -34,15 +34,16 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 2. Matrix 7.11.12   活跃
 3. GrimAC 2.3.68    活跃
 4. NCP 3.17.1    活跃
-5. Verus b3896    停更
+5. Verus b3896    偶尔更新
 6. Themis 0.16.1    活跃
 7. Intave 12    活跃
 8. Polar wdk    活跃
 9. AAC 5~4    停更
 10. Hawk BETA2108 BETA2008   停更  One Last Update In 2020
-11. Tatako 9.1.2    活跃
-12. Spiter   活跃
-13. Horizon-BETA17   活跃
+11. Tatako 0.96.5    活跃
+12. Spiter wdk   活跃
+13. Horizon-BETA17   疑似死亡
+14. Grizzly wdk 活跃
 
 ---
 
@@ -60,7 +61,7 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 
 反作弊兼容服务器的版本:1.7-1.21
 
-判断特征:拉回/回弹较少、sca放方块突然坠机，不放方块了
+判断特征:拉回/回弹较少，但是GhostBlock回弹。
 
 - Vulcan对于任何一个hack mode都具有检测项目，但是都不是很强，一般为生存服反作弊。
 
@@ -73,7 +74,7 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 
 #### Scaffold:
 
-在Expand情况下（距离较远）会不检测（超出特征范围）
+在Expand情况下（距离较远）会不检测（isBridging = flase，且那个expand检测本来就一般）
 
 有Raycast check,强度不高
 
@@ -83,13 +84,13 @@ Wait For Update AntiCheat:Polar、Intave、Themis、Verus、Spiter
 
 可以进行omni(暴力的)而且没有任何bypass的情况下
 
-虽然有sprint检测但是没用
+虽然有sprint检测但是几乎没用
 
 > 测试版本1.21 Wurst
 
 #### Killaura:
 
-Aim检测中规中矩，还可以但是照样绕
+Aim检测对于现代的客户端几乎没有，只要你的客户端完整修复了灵敏度即可。
 Cps推荐9-12，有AutoClicker检测
 
 可Switch，具有KeepSprint检测，不需要MoveFix，Raycast检测约等于没有，Hitbox和Reach纯属玄学。
@@ -102,7 +103,7 @@ Cps推荐9-12，有AutoClicker检测
 
 中规中矩，有时候对绿玩进行轻微的误判
 
-可以0 0（因为Vulcan对transaction的检测就是傻逼，cancel Transaction和velocity就可以00）
+可以0 0（因为Vulcan对transaction的检测就是sb，cancel Transaction和velocity就可以00，虽然说改进了但是和没改进一样）
 
 > 测试版本1.8.9 LiquidBounce B98
 
@@ -110,13 +111,15 @@ Cps推荐9-12，有AutoClicker检测
 
 GroundSpoof、Vclip、Timer检测
 
+可以使用一些客户端自带的Vulcan Nofall
+
 建议使用安全一些的MLG
 
 > 测试版本1.21 Wurst
 
 ##### Reach&HitBox:
 
-在高版本根本不检测，低版本检测也很弱，可以使用Via or Dis
+在高版本根本不检测，低版本检测也几乎没有，可以使用Via or Dis
 
 > 测试版本1.21 Wurst
 
@@ -181,10 +184,10 @@ DamageFly，受击弱检测。
 
 #### KillAura:
 
-只有两个vl，一个检测点击一个检测转头
+检测Strafe，转头和点击
 
-AimBot检测有检测snap，建议提前就拉好较长的swing range
-而且Aim检测较强，很容易判你AimBot(KillAura)
+AimBot检测有检测snap和shake，还会分析加速度，建议提前就拉好较长的swing range
+而且Aim检测较强，很容易判你AimBot
 
 Click主要监测点击速度，不超过10-14应该就没事
 
@@ -278,10 +281,10 @@ Intave Mode即可绕过
 
 判断特征:回弹/跨版本没MoveFix秒ban
 
-- GrimAC有较多的误判，也有较好的检测，他是模拟了玩家的各个移动，所以想要绕过
+- GrimAC有较多的误判，也有较好的检测，他是模拟了玩家的各个移动，所以想要绕过比较难
 - GrimAC会顶踢掉原版反作弊的保护，所以有一些漏洞可钻
 
-移动类十分困难~~尽管也有人做到了Bypass Anything~~
+移动类十分困难~~尽管也有人做到了Bypass Anything~~（其实是漏洞）
 
 #### KillAura:
 
@@ -321,7 +324,9 @@ strafe0.32-0.48做到bypass 6BPS
 
 有NoXZ，即在打到对方的一瞬间进行一次Velocity，但
 
-可能不是这个意思，我还没试过(mouse)
+可能不是这个意思，我还没试过(mouse)  
+
+不是这个意思啊
 
 > 未经测试
 
@@ -358,7 +363,7 @@ strafe0.32-0.48做到bypass 6BPS
 误判:survivalfly(尤见生存服:台阶、半砖、窗户冰块)、moving.passable(
 挖脚下方块，但是脚下方块实际上不能挖'类似于phase')
 
-基岩版:听说有检测
+基岩版:听说有检测，无测试。
 
 反作弊兼容服务器的版本:1.7-1.12 - 有更高版本的衍生反作弊
 
@@ -384,14 +389,14 @@ strafe0.32-0.48做到bypass 6BPS
 
 FastPlace在你斜上搭的时候会叠出vl，我还没解决方案
 
-direction这个检测按理来说是检测你手中方块的switch方案(当方块不足的时候换方块)
-但是实际上还检测部分转头，我不知道为什么
+direction是Raycast检测，请打开你的rotation，同时检测方块锁死。  
+
 > 检测的是玩家发c08的direction和服务器基于转头计算的direction是否相同，有误判(Xia__mc语)
 
 survivalfly是当你在速度太快的时候有概率检测你walkspeed+vdistrel+vacc+hspeed+airjump
 减速(比如说关闭sprint or 开启slow)即可
 
-blockplace.scaffold本人不清楚
+blockplace.scaffold：启发式检测，需要eagle降速绕过。
 
 > 测试版本1.8.9 FDP B9(=LB B98)
 
@@ -417,7 +422,7 @@ Very Poor. 你能拉0 0然后一点事情没有
 
 Reach在正常情况下最远距离应该是3.99Range 0vl
 
-HitBox暂未测试
+HitBox可以0.4 expand。
 
 > 测试版本1.21.1 Wurst
 
@@ -457,7 +462,7 @@ HitBox暂未测试
 
 #### Velocity
 
-无法0 0，其他忘了
+velocity只检测00，拉1%就行
 
 > 测试版本1.8.9 LiquidBounce B98 / 在云检测未掉时
 
@@ -498,7 +503,7 @@ HitBox暂未测试
 
 反作弊兼容服务器的版本:idk
 
-- Intave12/比较老的版本了Loyisa's，所以本章节有十分多纰漏，反作弊有保密协议
+- Intave12/比较老的版本了Loyisa，所以本章节有十分多纰漏，反作弊有保密协议
 
 #### KillAura
 
@@ -557,15 +562,13 @@ Bow同ConsumeMode
 基岩版:不检测
 
 - 2020年的反作弊，仅有1.8.9、1.7.10两个服务器支持版本，十分强大，误判也十分多
-- 注意，本章节用的HAWK为Loyisa的HAWK，有很多VL隐藏，所以描述很可能不完整
 - Hawk默认很多检测不开，几个vl才会有一个alert，config可以调整。
 
 #### KillAura:
 
-Range:3.19不检测，Rotation不检测
+Range:3.19不检测
 - 在DBC时会有fightspeed VL
-- 检测实际上很严格，但是Loyisa关掉了大部分check
-- 其实是默认不开 有一个较为神奇的启发Aim检测，需要拉低Rotation speed（其实就是snap检测）
+- 检测实际上很严格（HeuristicAim），需要拉低rotationSpeed，但是默认不开很多检测
 
 > 测试版本1.8.9 FDPXReborn5.8.1
 
@@ -616,42 +619,42 @@ MoveClick只会在Chest(箱子)内检查，在Inventory(背包)内就不会
 
 物品弱检测:
 
-误判:CPS超4爆KillAura、Badpackets(靠近悬浮字/NPC)
-
-- 专门检测BadPacket的，反作弊有保密协议
-
 基岩版:wdk
 
-####
+#### 反作弊有保密协议，只有一些公开的内容。
+
+#### Killaura
+国内权威的机器学习，据说可以检测Augustus。但是有保密协议所以不知道具体情况。
 
 ---
 
-## Tatako:硬算、高版本误判、基岩版未知、免费、国产
-Medusa based.
+## Tatako:硬算、高版本误判、基岩版不检测、免费、国产
+Medusa based.  支持GeyserMC，不检测基岩版。
 
-高版本弱检测:
+高版本弱检测: 暂时无  
+高版本兼容：不兼容服务端，最高1.13。客户端支持Viaversion并更新兼容性但是依旧有大量的超级误判。
 
 物品弱检测:Piston(站在活塞上即可)、Slime(粘液块:取消speed、fly check)、OnGround
 
 误判:BalanceTimerCheck(BadPackets)、GhostBlock(FlyB)、aimF(InstantRotation)、Scaffold(限速)、Reach、flyC(groundspoof)、AuraA、BlockSprint、Bed(在床上)
 
 - Move检测完全，但是每一项检测都是狗屎，Ymotion检测严格但误判不少
-- FlyB已经重写，但是仍然有不少误判
+- FlyB已经重写，但是仍然有不少误判（对transaction处理不好）
 
-> 哪个入乱写Dev的，plugin.yml不会看看？
+> 哪个入乱写Dev的，plugin.yml不会看看？DEV：tjshawa
 
 基岩版:不检测
 
 #### KillAura:
 
-Rotation速度不能拉高，cps9~13，开模拟双倍点否则会被Autoclicker检查杀死
-
-有ThroughWall(穿过墙壁攻击)检测
+强检测，有机器学习（但是有一些误判和绕过），免费客户端基本都死（有些可能死的慢，可能能活两把竞技场）  
+可以试试3.1 Reach+Aimassist，不会死/死的很慢。
 
 > 测试版本1.8.9 FDPXReborn5.8.1
+> 测试版本1.8.9 LiquidBounce b91
 
 #### NoSlow:
-绕过已经修补。
+绕过已经修补，SpeedK
 
 > 测试版本1.8.9 LiquidBounce b91
 
@@ -693,31 +696,30 @@ More Mode(NoMove)
 
 #### BedBreaker:
 
-几乎没有，跟WatchDog差不多的围绕一圈方块检查(Wall Check)
+几乎没有，跟WatchDog差不多的围绕一圈方块检查(Wall Check)  
 
 无Raycast check
 
 > 测试版本1.8.9 FDPXReborn5.8.1
 
 #### Velocity:
-
-attackreduce,reduceamount=0
-
-Velocity: h -1 v 1(反向击退)
+  
+不检测反向击退
 
 > 测试版本1.8.9 FDPXReborn5.8.1
 
 #### Strafe:
 
-检测（包括GroundStrafe）
+检测AirStrafe，Ground因为buffer叠不起来所以不检测，但是会检测某些AutoSprint（有缺陷）
 
 #### NoFall:
 
-Damage(在掉落空中受到伤害) 不检测，有人用修改的noGround绕过了，但大部分客户端的NoFall都用不了
+Damage(在掉落空中受到伤害) 不检测，有人用修改的noGround绕过了（不知道思路），但大部分客户端的NoFall都用不了
 
 #### FastUse:
 
-没有专门的检测，但无法使用（会有杂七杂八的BadPackets）
+没有专门的检测，但无法使用（会有杂七杂八的BadPackets）  
+我也不知道能不能绕
 
 > 测试版本1.8.9 LiquidBounce b91
 ---
@@ -736,7 +738,7 @@ Damage(在掉落空中受到伤害) 不检测，有人用修改的noGround绕过
 
 #### Scaffold:
 
-检测rayCast。
+检测rayCast，其他几乎不检测。
 
 #### NoSlow:
 
@@ -758,7 +760,9 @@ BadpacketE和KillauraNormalAB为AB检测
 误判：idk
 
 #### Killaura
-有较好的Aim检查和一堆分析转头检查，需要RandomCenter，cps8~14，转头速度40~65
+有较好的Aim检查和一堆分析转头检查，需要RandomCenter，cps8~14，转头速度40~65  
+
+但是新版本已经修补了FDP，LiquidBounce的Aim（实际未知）
 
 > 测试版本1.8.9 LiquidBounce b91
 #### Scaffold
@@ -768,6 +772,20 @@ BadpacketE和KillauraNormalAB为AB检测
 
 #### Movement
 总体还可以，Speed无法绕过，检测GroundStrafe，老老实实legit speed。
+
+> 测试版本1.8.9 LiquidBounce b91
+
+
+## MX
+新的战斗反作弊。只有Combat和Velocity检测。  
+#### Killaura
+有统计学和启发式Aimbot检测，但是检测很慢且不完全，使用低版本LB调参数和高版本LB的深度学习可以绕过。  
+注意要RandomCenter和低转头速度。
+
+> 测试版本1.8.9 LiquidBounce b91
+
+#### Velocity
+检测99% Horizontal & Vertical，且带及其恶俗的lagback。  
 
 > 测试版本1.8.9 LiquidBounce b91
 
